@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@fontsource-variable/inter";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -39,6 +40,18 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* custom theme */
+  --font-sans: "Inter Variable", sans-serif;
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --font-sans: var(--font-sans);
 }
 
 :root {
@@ -74,6 +87,20 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* custom theme  */
+  /* Purple from main sections and buttons: #7C3AED */
+  --color-primary: hsl(262, 83%, 58%);
+  /* Yellow/Gold from accents: #FDE047 */
+  --color-secondary: hsl(45, 96%, 64%);
+  /* Light purple from background: #E0E7FF */
+  --color-accent: hsl(262, 100%, 87%);
+  --color-background: hsl(0, 0%, 100%); /* White background */
+  --color-foreground: hsl(220, 9%, 46%); /* Dark gray text */
+  --color-muted: hsl(262, 50%, 70%); /* Muted purple text */
+  --color-border: hsl(262, 30%, 85%); /* Light purple borders */
+
+  --font-sans: "Inter Variable", sans-serif;
 }
 
 .dark {
