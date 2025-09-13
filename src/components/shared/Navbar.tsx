@@ -10,16 +10,16 @@ export const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-background  sticky top-0 z-50 ">
+      <div className="container-custom">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="relative">
+            {/* <div className="relative">
               <Bitcoin className="h-8 w-8 text-primary" />
               <Sparkles className="h-3 w-3 text-yellow-400 absolute -top-1 -right-1" />
-            </div>
-            <span className="text-xl font-bold text-foreground bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            </div> */}
+            <span className="text-xl font-bold text-foreground ">
               Bitcoin Kids
             </span>
           </div>
@@ -57,7 +57,7 @@ export const Navbar = () => {
             <Button variant="ghost" className="text-foreground">
               Login
             </Button>
-            <Button variant="purpleOutline" className="rounded-full px-6">
+            <Button variant="purpleOutline" className="px-6 py-2">
               Sign Up
             </Button>
           </div>
@@ -114,7 +114,7 @@ export const Navbar = () => {
                 </Button>
                 <Button
                   variant="purpleOutline"
-                  className="w-full justify-center rounded-full"
+                  className="w-full justify-center"
                 >
                   Sign Up
                 </Button>
