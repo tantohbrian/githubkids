@@ -1,17 +1,18 @@
 import { Button } from "@/components/ui/button";
-import Aurora from "@/components/Aurora";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 import { FloatingNavbar } from "@/components/shared/FloatingNavbar";
+import { cn } from "@/lib/utils";
 
 export const Hero = () => {
   return (
-    <section className="relative h-[50vh] overflow-hidden bg-white">
-      {/* Aurora Background */}
+    <section className="relative h-[75vh] overflow-hidden bg-white">
+      {/* DotPattern Background */}
       <div className="absolute inset-0 w-full h-full">
-        <Aurora
-          colorStops={["#8b5cf6", "#f59e0b", "#8b5cf6"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
+        <DotPattern
+          glow={true}
+          className={cn(
+            "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          )}
         />
       </div>
 
