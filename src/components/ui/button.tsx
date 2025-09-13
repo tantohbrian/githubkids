@@ -16,15 +16,20 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // New variants for Bitcoin Kids
+        // New modern variants
+        white: "bg-white text-black hover:bg-gray-100",
+        primary: "bg-primary text-white hover:bg-primary/90",
+        acrylic:
+          "bg-black/20 backdrop-blur-md border border-white/20 text-white hover:bg-black/30",
+        // Legacy variants for Bitcoin Kids
         purpleOutline:
           "border-2 border-primary bg-white text-primary hover:bg-accent/20 cursor-pointer",
         purpleSolid: "bg-primary text-white hover:bg-primary/90",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 px-3",
-        lg: "h-11 px-8",
+        default: "h-12 px-6 py-3",
+        sm: "h-10 px-4 py-2",
+        lg: "h-14 px-8 py-4",
         icon: "h-10 w-10",
       },
     },

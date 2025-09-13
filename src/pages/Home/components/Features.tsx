@@ -6,18 +6,20 @@ export const Features = () => {
       icon: <Brain className="h-12 w-12 text-primary" />,
       title: "Fun Quiz",
       description: "Test your understanding with a plan! But fun online!",
-      // bg:
+      bg: "#fcf6f1",
     },
     {
       icon: <Palette className="h-12 w-12 text-primary" />,
       title: "Creative Activities",
       description:
         "Discover enjoyable activities such as coloring, crafting, and science.",
+      bg: "#eaf6fb", // soft blue
     },
     {
       icon: <GamepadIcon className="h-12 w-12 text-primary" />,
       title: "Learn with Games",
       description: "Learn something new while you feel playing games!",
+      bg: "#f1faee", // pastel green
     },
   ];
 
@@ -38,7 +40,8 @@ export const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow text-center"
+              style={{ background: feature.bg }}
+              className="rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow text-center"
             >
               <div className="flex justify-center mb-6">{feature.icon}</div>
               <h3 className="text-2xl font-bold text-foreground mb-4">

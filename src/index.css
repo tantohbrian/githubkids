@@ -39,7 +39,7 @@
 
   /* custom theme  */
   /* Purple from main sections and buttons: #7C3AED */
-  --color-primary: hsl(38, 90%, 60%);
+  --color-primary: rgb(245, 177, 61);
   /* Yellow/Gold from accents: #FDE047 */
   --color-secondary: hsl(45, 96%, 64%);
   /* Light purple from background: #E0E7FF */
@@ -112,4 +112,60 @@
 /* Add this global container class */
 .container-custom {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Font System - Based on 14px base with specified ratios */
+@layer utilities {
+  /* Smallest text (footnotes, metadata, badges) - 12px */
+  .text-xs-system {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* Buttons / Nav / Labels - 14px (base) */
+  .text-sm-system {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Body text (paragraphs, forms) - 16px */
+  .text-base-system {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Secondary headings / card titles - 20px */
+  .text-lg-system {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  /* Section titles (Features, About, Kids Corner) - 24px */
+  .text-xl-system {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  /* Sub-headline (hero subtitle) - 28px */
+  .text-2xl-system {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  /* Hero headline (main landing page) - 48px */
+  .text-4xl-system {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  /* Extra-large hero / campaign text - 56-64px */
+  .text-5xl-system {
+    font-size: 56px;
+    line-height: 1.1;
+  }
+
+  .text-6xl-system {
+    font-size: 64px;
+    line-height: 1.1;
+  }
 }
