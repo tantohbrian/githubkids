@@ -40,7 +40,7 @@
 
   /* custom theme  */
   /* Purple from main sections and buttons: #7C3AED */
-  --color-primary: rgb(245, 177, 61);
+  --color-primary: #ea580c;
   /* Yellow/Gold from accents: #FDE047 */
   --color-secondary: hsl(45, 96%, 64%);
   /* Light purple from background: #E0E7FF */

@@ -9,6 +9,7 @@ export const Features = () => {
       bg: "#E8D5FF", // Light lavender
       textColor: "#4C1D95", // Dark purple
       decoration: "circles",
+      
       tilt: "rotate-1",
     },
     {

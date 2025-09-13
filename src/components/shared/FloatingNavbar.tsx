@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Bitcoin, Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { SignupForm } from "@/components/ui/SignupForm";
 
 export const FloatingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,9 +75,11 @@ export const FloatingNavbar = () => {
             >
               Login
             </Button>
-            <Button variant="white" size="sm">
-              Sign Up
-            </Button>
+            <SignupForm>
+              <Button variant="white" size="sm">
+                Sign Up
+              </Button>
+            </SignupForm>
           </div>
 
           {/* Mobile Menu Button */}
@@ -128,9 +131,11 @@ export const FloatingNavbar = () => {
                 >
                   Login
                 </Button>
-                <Button variant="white" className="w-full justify-center">
-                  Sign Up
-                </Button>
+                <SignupForm>
+                  <Button variant="white" className="w-full justify-center">
+                    Sign Up
+                  </Button>
+                </SignupForm>
               </div>
             </div>
           </div>

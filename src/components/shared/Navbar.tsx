@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Bitcoin, Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { SignupForm } from "@/components/ui/SignupForm";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,9 +59,11 @@ export const Navbar = () => {
             <Button variant="ghost" className="text-gray-700 cursor-pointer">
               Login
             </Button>
-            <Button variant="primary" className="px-6 py-2 cursor-pointer">
-              Sign Up
-            </Button>
+            <SignupForm>
+              <Button variant="primary" className="px-6 py-2 cursor-pointer">
+                Sign Up
+              </Button>
+            </SignupForm>
           </div>
 
           {/* Mobile menu button */}
@@ -116,12 +119,14 @@ export const Navbar = () => {
                 >
                   Login
                 </Button>
-                <Button
-                  variant="primary"
-                  className="w-full justify-center cursor-pointer"
-                >
-                  Sign Up
-                </Button>
+                <SignupForm>
+                  <Button
+                    variant="primary"
+                    className="w-full justify-center cursor-pointer"
+                  >
+                    Sign Up
+                  </Button>
+                </SignupForm>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -46,6 +47,36 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, children, ...props }, ref) => {
+    // Special handling for getStarted variant
+    if (variant === "getStarted") {
+      return (
+        <button
+          className={cn(
+            "group flex h-12 w-full items-center justify-center gap-3 rounded-lg bg-amber-100 p-2 font-bold transition-colors duration-100 ease-in-out hover:bg-orange-600",
+            className
+          )}
+          ref={ref}
+          {...props}
+        >
+          <span className="text-orange-600 transition-colors duration-100 ease-in-out group-hover:text-amber-100">
+            {children}
+          </span>
+          <div className="relative flex h-7 w-7 items-center justify-center overflow-hidden rounded-full transition-transform duration-100 bg-orange-600 group-hover:bg-amber-100">
+            <div className="absolute left-0 flex h-7 w-14 -translate-x-1/2 items-center justify-center transition-all duration-200 ease-in-out group-hover:translate-x-0">
+              <ArrowRight
+                size={16}
+                className="size-7 transform p-1 text-orange-600 opacity-0 group-hover:opacity-100"
+              />
+              <ArrowRight
+                size={16}
+                className="size-7 transform p-1 text-amber-100 opacity-100 transition-transform duration-300 ease-in-out group-hover:opacity-0"
+              />
+            </div>
+          </div>
+        </button>
+      );
+    }
+
     return (
       <button
         className={cn(buttonVariants({ variant, size, className }))}
