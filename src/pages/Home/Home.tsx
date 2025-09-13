@@ -8,30 +8,34 @@ export const Home = () => {
   return (
     <div>
       <Hero />
-      <Features />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold text-foreground">
-            Library Preview
-          </h2>
-          <Link
-            to="/library"
-            className="text-primary font-semibold hover:underline"
-          >
-            View All
-          </Link>
+      <section className="py-20">
+        <Features />
+      </section>
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-xl-system font-bold text-gray-900">
+              Library Preview
+            </h2>
+            <Link
+              to="/library"
+              className="text-primary font-semibold hover:underline cursor-pointer"
+            >
+              View All
+            </Link>
+          </div>
+          <LibraryPreview />
         </div>
-        <LibraryPreview />
-      </div>
+      </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-[#060010]">
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-xl-system font-bold text-white mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-xl-system font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-2xl-system text-white/80">
+            <p className="text-2xl-system text-gray-600">
               Everything you need to know about Bitcoin Kids
             </p>
           </div>

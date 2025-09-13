@@ -34,16 +34,18 @@ export const FAQAccordion = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <Accordion defaultExpandedKeys={["1"]} className="gap-4">
+      <Accordion defaultExpandedKeys={["1"]} className="gap-6">
         {faqData.map((item) => (
           <AccordionItem
             key={item.key}
             aria-label={item.title}
             subtitle={item.subtitle}
             title={item.title}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg"
+            className="bg-gray-50 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer"
           >
-            <div className="text-white/90 leading-relaxed">{item.content}</div>
+            <div className="text-gray-700 leading-relaxed text-base-system">
+              {item.content}
+            </div>
           </AccordionItem>
         ))}
       </Accordion>

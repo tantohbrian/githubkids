@@ -35,14 +35,11 @@ const previewBooks: Book[] = [
 ];
 
 export const LibraryPreview = () => (
-  <section className="py-10">
-    <h2 className="text-2xl font-bold mb-6 text-foreground">
-      Featured Library Resources
-    </h2>
+  <div>
     <div className="flex gap-6 overflow-x-auto pb-2">
       {previewBooks.map((book) => (
         <BookCard key={book.id} book={book} />
       ))}
     </div>
-  </section>
+  </div>
 );

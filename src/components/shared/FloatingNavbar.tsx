@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Bitcoin, Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const FloatingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,27 +39,27 @@ export const FloatingNavbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#"
-              className="text-white/90 hover:text-white transition-colors font-medium"
+            <Link
+              to="/"
+              className="text-sm-system text-white/90 hover:text-white transition-colors font-medium cursor-pointer"
             >
               Home
-            </a>
-            <a
-              href="#"
-              className="text-white/90 hover:text-white transition-colors font-medium"
+            </Link>
+            <Link
+              to="/library"
+              className="text-sm-system text-white/90 hover:text-white transition-colors font-medium cursor-pointer"
             >
               Library
-            </a>
+            </Link>
             <a
               href="#"
-              className="text-white/90 hover:text-white transition-colors font-medium"
+              className="text-sm-system text-white/90 hover:text-white transition-colors font-medium cursor-pointer"
             >
               Kids Corner
             </a>
             <a
               href="#"
-              className="text-white/90 hover:text-white transition-colors font-medium"
+              className="text-sm-system text-white/90 hover:text-white transition-colors font-medium cursor-pointer"
             >
               About
             </a>
@@ -95,27 +96,27 @@ export const FloatingNavbar = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-white/20">
             <div className="space-y-3">
-              <a
-                href="#"
-                className="block px-3 py-2 text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              <Link
+                to="/"
+                className="block px-3 py-2 text-sm-system text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Home
-              </a>
-              <a
-                href="#"
-                className="block px-3 py-2 text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              </Link>
+              <Link
+                to="/library"
+                className="block px-3 py-2 text-sm-system text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Library
-              </a>
+              </Link>
               <a
                 href="#"
-                className="block px-3 py-2 text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+                className="block px-3 py-2 text-sm-system text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Kids Corner
               </a>
               <a
                 href="#"
-                className="block px-3 py-2 text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+                className="block px-3 py-2 text-sm-system text-white/90 hover:text-white font-medium rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
               >
                 About
               </a>
