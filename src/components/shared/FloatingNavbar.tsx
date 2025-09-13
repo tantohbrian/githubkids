@@ -29,13 +29,13 @@ export const FloatingNavbar = () => {
       >
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2 cursor-pointer">
             <div className="relative">
               <Bitcoin className="h-6 w-6 text-white" />
               <Sparkles className="h-2 w-2 text-yellow-400 absolute -top-1 -right-1" />
             </div>
             <span className="text-lg font-bold text-white">Bitcoin Kids</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

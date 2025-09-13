@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "@fontsource-variable/inter";
 @import "@fontsource/caveat";
+@import "@fontsource/kalam";
 
 :root {
   --radius: 0.625rem;
@@ -99,7 +100,8 @@
 }
 @theme {
   --font-sans: "Inter Variable", sans-serif;
-  --font-caveat: "Caveat", cursive; /* Add this line */
+  --font-caveat: "Caveat", cursive;
+  --font-kalam: "Kalam", cursive;
 
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);

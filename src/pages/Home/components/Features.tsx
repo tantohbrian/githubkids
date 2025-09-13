@@ -25,7 +25,7 @@ export const Features = () => {
       icon: <GamepadIcon className="h-8 w-8 text-purple-800" />,
       title: "Learn with Games",
       description: "Learn something new while your kids playing games!",
-      bg: "#FDE047", // Bright yellow
+      bg: "#ffd35e", // Bright yellow
       textColor: "#4C1D95", // Dark purple
       decoration: "dots",
       tilt: "rotate-1",
@@ -88,7 +88,7 @@ export const Features = () => {
             className={`relative transform ${feature.tilt} hover:scale-105 transition-all duration-300 cursor-pointer`}
             style={{ background: feature.bg }}
           >
-            <div className="rounded-2xl p-8 h-full relative overflow-hidden">
+            <div className="rounded-3xl p-8 h-full relative overflow-hidden">
               {/* Decorative Elements */}
               <DecorationElement type={feature.decoration} />
 

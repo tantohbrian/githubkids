@@ -13,8 +13,8 @@ export const Home = () => {
       </section>
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-xl-system font-bold text-gray-900">
+          <div className="text-center mb-12">
+            <h2 className="text-xl-system font-bold text-gray-900 mb-6">
               Library Preview
             </h2>
             <Link
@@ -35,7 +35,7 @@ export const Home = () => {
             <h2 className="text-xl-system font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-2xl-system text-gray-600">
+            <p className="text-base-system text-gray-600">
               Everything you need to know about Bitcoin Kids
             </p>
           </div>

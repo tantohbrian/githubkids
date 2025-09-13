@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Bitcoin, Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,43 +11,43 @@ export const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-background  sticky top-0 z-50 ">
+    <nav className="bg-white sticky top-0 z-50 border-b border-gray-200">
       <div className="container-custom">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            {/* <div className="relative">
+          <Link to="/" className="flex items-center gap-2 cursor-pointer">
+            <div className="relative">
               <Bitcoin className="h-8 w-8 text-primary" />
               <Sparkles className="h-3 w-3 text-yellow-400 absolute -top-1 -right-1" />
-            </div> */}
-            <span className="text-xl font-bold text-foreground ">
+            </div>
+            <span className="text-xl font-bold text-gray-900">
               Bitcoin Kids
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            <Link
+              to="/"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
             >
               Home
-            </a>
-            <a
-              href="#"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link
+              to="/library"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
             >
               Library
-            </a>
+            </Link>
             <a
               href="#"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
             >
               Kids Corner
             </a>
             <a
               href="#"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
             >
               About
             </a>
@@ -54,10 +55,10 @@ export const Navbar = () => {
 
           {/* Auth Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" className="text-foreground">
+            <Button variant="ghost" className="text-gray-700 cursor-pointer">
               Login
             </Button>
-            <Button variant="purpleOutline" className="px-6 py-2">
+            <Button variant="primary" className="px-6 py-2 cursor-pointer">
               Sign Up
             </Button>
           </div>
@@ -68,7 +69,7 @@ export const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={toggleMenu}
-              className="text-foreground"
+              className="text-gray-700 cursor-pointer"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -81,40 +82,43 @@ export const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-sm">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a
-                href="#"
-                className="block px-3 py-2 text-foreground hover:text-primary font-medium"
+              <Link
+                to="/"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
               >
                 Home
-              </a>
-              <a
-                href="#"
-                className="block px-3 py-2 text-foreground hover:text-primary font-medium"
+              </Link>
+              <Link
+                to="/library"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
               >
                 Library
-              </a>
+              </Link>
               <a
                 href="#"
-                className="block px-3 py-2 text-foreground hover:text-primary font-medium"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
               >
                 Kids Corner
               </a>
               <a
                 href="#"
-                className="block px-3 py-2 text-foreground hover:text-primary font-medium"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
               >
                 About
               </a>
 
-              <div className="pt-4 space-y-2 border-t border-border">
-                <Button variant="outline" className="w-full justify-center">
+              <div className="pt-4 space-y-2 border-t border-gray-200">
+                <Button
+                  variant="outline"
+                  className="w-full justify-center cursor-pointer"
+                >
                   Login
                 </Button>
                 <Button
-                  variant="purpleOutline"
-                  className="w-full justify-center"
+                  variant="primary"
+                  className="w-full justify-center cursor-pointer"
                 >
                   Sign Up
                 </Button>

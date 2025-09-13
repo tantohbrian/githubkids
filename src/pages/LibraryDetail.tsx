@@ -136,10 +136,10 @@ export default function LibraryDetail() {
     return (
       <div className="py-16 px-4 bg-gray-50 min-h-screen">
         <div className="container-custom text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-xl-system font-bold text-gray-900 mb-4">
             Resource Not Found
           </h1>
-          <p className="text-gray-600 mb-8">
+          <p className="text-base-system text-gray-600 mb-8">
             The resource you're looking for doesn't exist.
           </p>
           <Button onClick={() => navigate("/library")} variant="primary">
@@ -232,7 +232,7 @@ export default function LibraryDetail() {
 
         {/* Preview Section */}
         <div className="bg-white rounded-2xl p-8 shadow-lg mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h2 className="text-xl-system font-bold text-gray-900 mb-6 text-center">
             Preview Contents
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -253,7 +253,7 @@ export default function LibraryDetail() {
         {/* Related Resources */}
         {relatedBooks.length > 0 && (
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl-system font-bold text-gray-900 mb-6 text-center">
               Related Resources
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
