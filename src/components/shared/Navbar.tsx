@@ -42,12 +42,12 @@ export const Navbar = () => {
             >
               Library
             </Link>
-            <a
-              href="#"
+            <Link
+              to="/kids-corner"
               className="text-sm-system text-gray-700 hover:text-gray-800 transition-colors font-bold cursor-pointer"
             >
               Kids Corner
-            </a>
+            </Link>
             <a
               href="#"
               className="text-sm-system text-gray-700 hover:text-gray-800 transition-colors font-bold cursor-pointer"
@@ -109,12 +109,12 @@ export const Navbar = () => {
               >
                 Library
               </Link>
-              <a
-                href="#"
+              <Link
+                to="/kids-corner"
                 className="block px-3 py-2 text-sm-system text-gray-700 hover:text-gray-800 font-bold cursor-pointer"
               >
                 Kids Corner
-              </a>
+              </Link>
               <a
                 href="#"
                 className="block px-3 py-2 text-sm-system text-gray-700 hover:text-gray-800 font-bold cursor-pointer"
