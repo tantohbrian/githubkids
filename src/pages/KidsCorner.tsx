@@ -16,7 +16,7 @@ export const KidsCorner = () => {
         "Test your knowledge with fun multiple-choice questions about Bitcoin and blockchain!",
       icon: Brain,
       path: "/kids-corner/quiz",
-      bgColor: "bg-gradient-to-br from-blue-100 to-blue-200",
+      bgColor: "bg-white",
       iconColor: "text-blue-600",
     },
     {
@@ -25,7 +25,7 @@ export const KidsCorner = () => {
         "Match Bitcoin-related words with their meanings in this exciting puzzle game!",
       icon: Puzzle,
       path: "/kids-corner/word-match",
-      bgColor: "bg-gradient-to-br from-green-100 to-green-200",
+      bgColor: "bg-white",
       iconColor: "text-green-600",
     },
     {
@@ -34,7 +34,7 @@ export const KidsCorner = () => {
         "Flip cards to find matching Bitcoin symbols and improve your memory skills!",
       icon: MemoryStick,
       path: "/kids-corner/memory",
-      bgColor: "bg-gradient-to-br from-purple-100 to-purple-200",
+      bgColor: "bg-white",
       iconColor: "text-purple-600",
     },
     {
@@ -43,7 +43,7 @@ export const KidsCorner = () => {
         "Count coins to reach target amounts and learn about Bitcoin values!",
       icon: Coins,
       path: "/kids-corner/counting-coins",
-      bgColor: "bg-gradient-to-br from-amber-100 to-amber-200",
+      bgColor: "bg-white",
       iconColor: "text-amber-600",
     },
   ];

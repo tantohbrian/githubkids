@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, CheckCircle, XCircle, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { triggerConfetti } from "@/utils/confetti";
 
 interface Question {
   id: number;
@@ -120,6 +121,16 @@ export const QuizGame = () => {
     if (percentage >= 40) return "📚 Keep studying! You're getting there!";
     return "💪 Don't give up! Try again!";
   };
+
+  // Trigger confetti for good scores
+  useEffect(() => {
+    if (quizCompleted) {
+      const percentage = (score / quizQuestions.length) * 100;
+      if (percentage >= 80) {
+        triggerConfetti();
+      }
+    }
+  }, [quizCompleted, score]);
 
   if (quizCompleted) {
     return (
