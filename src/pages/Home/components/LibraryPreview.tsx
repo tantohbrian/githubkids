@@ -595,7 +595,7 @@ export const LibraryPreview = () => {
   return (
     <div className="container mx-auto px-4 py-12 max-w-7xl">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-xl-system font-bold text-gray-800 mb-4">
           Library Preview
         </h2>
         <Link

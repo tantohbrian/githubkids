@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Bitcoin, Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SignupForm } from "@/components/ui/SignupForm";
+import logo from "@/assets/logo.Png";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,10 +18,11 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 cursor-pointer">
-            <div className="relative">
-              <Bitcoin className="h-8 w-8 text-gray-800" />
-              <Sparkles className="h-3 w-3 text-yellow-400 absolute -top-1 -right-1" />
-            </div>
+            <img
+              src={logo}
+              alt="Bitcoin Kids Logo"
+              className="h-12 w-12 object-contain"
+            />
             <span className="text-xl font-bold text-gray-900">
               Bitcoin Kids
             </span>

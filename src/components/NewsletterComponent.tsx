@@ -9,7 +9,9 @@ export const NewsletterComponent = () => {
         <div className="rounded-2xl p-8">
           <div className="text-center space-y-8">
             {/* Title */}
-            <h2 className="text-3xl font-bold text-white">Keep Updated</h2>
+            <h2 className="text-xl-system font-bold text-white">
+              Keep Updated
+            </h2>
 
             {/* Description */}
             <p className="text-white/90 text-lg leading-relaxed max-w-md mx-auto">

@@ -666,7 +666,7 @@ export default function Library() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl-system font-bold mb-4 text-gray-900">
+          <h1 className="text-xl-system font-bold mb-4 text-gray-900">
             Library
           </h1>
           <p className="text-base-system text-gray-600 max-w-2xl mx-auto">
@@ -717,7 +717,7 @@ export default function Library() {
           {/* Regular Grid Section */}
           {adjustedRegularBooks.length > 0 && (
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <h2 className="text-xl-system font-bold text-gray-900 mb-6 text-center">
                 Featured Books
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2">
