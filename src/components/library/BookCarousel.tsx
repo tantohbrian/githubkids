@@ -33,14 +33,16 @@ export const BookCarousel = ({
         opts={{
           align: "start",
           loop: true,
+          skipSnaps: false,
+          dragFree: true,
         }}
-        className="w-full"
+        className="w-full overflow-hidden"
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent className="-ml-1 md:-ml-2">
           {books.map((book) => (
             <CarouselItem
               key={book.id}
-              className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6"
+              className="pl-1 md:pl-2 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6"
             >
               <BookCard book={book} onAddToWishlist={onAddToWishlist} />
             </CarouselItem>

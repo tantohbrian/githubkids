@@ -593,7 +593,7 @@ export const LibraryPreview = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 max-w-7xl">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">
           Library Preview
@@ -606,7 +606,12 @@ export const LibraryPreview = () => {
         </Link>
       </div>
 
-      <BookCarousel books={sampleBooks} onAddToWishlist={handleAddToWishlist} />
+      <div className="overflow-hidden">
+        <BookCarousel
+          books={sampleBooks}
+          onAddToWishlist={handleAddToWishlist}
+        />
+      </div>
     </div>
   );
 };
