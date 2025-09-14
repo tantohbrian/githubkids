@@ -637,15 +637,29 @@ export default function Library() {
   };
 
   // Split books into groups for alternating display, ensuring no single books on a row
+  const maxColumns = 6;
+
+  // Calculate how many complete rows we can have in the regular grid
   const regularBooks = sortedBooks.filter((_, index) => index % 2 === 0);
   const carouselBooks = sortedBooks.filter((_, index) => index % 2 === 1);
 
-  // Ensure regularBooks has at least 2 books to avoid single book on row
-  const adjustedRegularBooks = regularBooks.length === 1 ? [] : regularBooks;
-  const adjustedCarouselBooks =
-    regularBooks.length === 1
-      ? [...carouselBooks, ...regularBooks]
-      : carouselBooks;
+  // Check if regularBooks would have a single book on the last row
+  const regularRemaining = regularBooks.length % maxColumns;
+
+  let adjustedRegularBooks: Book[] = [];
+  let adjustedCarouselBooks: Book[] = [];
+
+  if (regularRemaining === 1) {
+    // Move the last book from regularBooks to carouselBooks
+    adjustedRegularBooks = regularBooks.slice(0, -1);
+    adjustedCarouselBooks = [
+      ...carouselBooks,
+      regularBooks[regularBooks.length - 1],
+    ];
+  } else {
+    adjustedRegularBooks = regularBooks;
+    adjustedCarouselBooks = carouselBooks;
+  }
 
   return (
     <section className="py-16 px-4 bg-gray-50 min-h-screen">
