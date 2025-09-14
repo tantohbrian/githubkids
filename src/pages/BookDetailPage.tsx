@@ -459,11 +459,7 @@ const sampleBooks: Book[] = [
     ageRange: "8-14",
     pages: 44,
     format: "PDF + Print",
-    preview: [
-      "Crypto Crusaders",
-      "Blockchain Battles",
-      "Digital Defenders",
-    ],
+    preview: ["Crypto Crusaders", "Blockchain Battles", "Digital Defenders"],
     rating: 5,
     category: "Entertainment",
     language: "English",
@@ -483,11 +479,7 @@ const sampleBooks: Book[] = [
     ageRange: "10-16",
     pages: 80,
     format: "PDF + Code Examples",
-    preview: [
-      "Basic Programming",
-      "Blockchain Code",
-      "Smart Contracts",
-    ],
+    preview: ["Basic Programming", "Blockchain Code", "Smart Contracts"],
     rating: 5,
     category: "Educational",
     language: "English",
@@ -527,11 +519,7 @@ const sampleBooks: Book[] = [
     ageRange: "8-15",
     pages: 40,
     format: "PDF + Audio",
-    preview: [
-      "Digital Dreams",
-      "Crypto Verses",
-      "Blockchain Ballads",
-    ],
+    preview: ["Digital Dreams", "Crypto Verses", "Blockchain Ballads"],
     rating: 4,
     category: "Cultural",
     language: "Multiple",
@@ -575,11 +563,7 @@ const sampleBooks: Book[] = [
     ageRange: "11-16",
     pages: 72,
     format: "PDF + Interactive",
-    preview: [
-      "Bitcoin's Origins",
-      "Key Milestones",
-      "Future Predictions",
-    ],
+    preview: ["Bitcoin's Origins", "Key Milestones", "Future Predictions"],
     rating: 4,
     category: "Educational",
     language: "English",
@@ -599,11 +583,7 @@ const sampleBooks: Book[] = [
     ageRange: "6-12",
     pages: 36,
     format: "PDF + Audio",
-    preview: [
-      "Crypto Songs",
-      "Blockchain Beats",
-      "Digital Melodies",
-    ],
+    preview: ["Crypto Songs", "Blockchain Beats", "Digital Melodies"],
     rating: 5,
     category: "Entertainment",
     language: "Multiple",
@@ -637,7 +617,10 @@ const BookDetailPage = () => {
           <p className="text-lg text-gray-600 mb-8">
             The book you are looking for does not exist.
           </p>
-          <Button onClick={() => navigate("/library")}>
+          <Button
+            onClick={() => navigate("/library")}
+            className="text-sm-system"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Library
           </Button>
@@ -674,7 +657,7 @@ const BookDetailPage = () => {
         <Button
           variant="ghost"
           onClick={() => navigate("/library")}
-          className="mb-8 text-gray-600 hover:text-gray-800"
+          className="mb-8 text-gray-600 hover:text-gray-800 text-sm-system"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Library
@@ -771,7 +754,12 @@ const BookDetailPage = () => {
                 <span className="text-3xl font-bold text-primary">
                   {currentPrice}
                 </span>
-                <Button onClick={handleBuy} variant="primary" size="lg">
+                <Button
+                  onClick={handleBuy}
+                  variant="primary"
+                  size="lg"
+                  className="text-sm-system"
+                >
                   <ShoppingCart className="w-5 h-5 mr-2" />
                   Buy & Download
                 </Button>

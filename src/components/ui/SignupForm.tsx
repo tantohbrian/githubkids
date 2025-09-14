@@ -8,8 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import Stepper, { Step } from "@/components/ui/Stepper";
 
@@ -86,7 +85,8 @@ export const SignupForm = ({ children }: SignupFormProps) => {
     }
   };
 
-  const handleRoleChange = (role: "parent" | "teacher") => {
+  const handleRoleChange = (value: string) => {
+    const role = value as "parent" | "teacher";
     setSelectedRole(role);
     setFormData((prev) => ({ ...prev, role }));
   };

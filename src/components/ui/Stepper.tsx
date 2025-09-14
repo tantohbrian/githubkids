@@ -3,8 +3,8 @@ import React, {
   Children,
   useRef,
   useLayoutEffect,
-  HTMLAttributes,
-  ReactNode,
+  type HTMLAttributes,
+  type ReactNode,
 } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -156,7 +156,7 @@ export default function Stepper({
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`duration-350 rounded px-2 py-1 transition cursor-pointer ${
+                  className={`duration-350 rounded px-2 py-1 transition cursor-pointer text-sm-system ${
                     currentStep === 1
                       ? "pointer-events-none opacity-50 text-neutral-400"
                       : "text-neutral-400 hover:text-neutral-700"
@@ -168,7 +168,7 @@ export default function Stepper({
               )}
               <button
                 onClick={isLastStep ? handleComplete : handleNext}
-                className="duration-350 flex items-center justify-center rounded-2xl bg-primary py-1 px-3.5 font-medium tracking-tight text-white transition hover:bg-primary/90 active:bg-primary/80 cursor-pointer"
+                className="duration-350 flex items-center justify-center rounded-2xl bg-primary py-1 px-3.5 font-medium tracking-tight text-white transition hover:bg-primary/90 active:bg-primary/80 cursor-pointer text-sm-system"
                 {...nextButtonProps}
               >
                 {isLastStep ? "Create Account" : nextButtonText}

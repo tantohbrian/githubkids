@@ -3,31 +3,31 @@ import { Brain, Palette, GamepadIcon } from "lucide-react";
 export const Features = () => {
   const features = [
     {
-      icon: <Brain className="h-8 w-8 text-purple-800" />,
+      icon: <Brain className="h-8 w-8 text-gray-800" />,
       title: "Fun Quiz",
       description: "Test your understanding with a short but fun quizzes!",
       bg: "#E8D5FF", // Light lavender
-      textColor: "#4C1D95", // Dark purple
+      textColor: "#374151", // Dark gray
       decoration: "circles",
-      
+
       tilt: "rotate-1",
     },
     {
-      icon: <Palette className="h-8 w-8 text-purple-800" />,
+      icon: <Palette className="h-8 w-8 text-gray-800" />,
       title: "Creative Activities",
       description:
         "Discover enjoyable activities such as coloring, crafting, and science.",
-      bg: "#4C1D95", // Dark purple
+      bg: "#374151", // Dark gray
       textColor: "#FFFFFF", // White
       decoration: "waves",
       tilt: "-rotate-1",
     },
     {
-      icon: <GamepadIcon className="h-8 w-8 text-purple-800" />,
+      icon: <GamepadIcon className="h-8 w-8 text-gray-800" />,
       title: "Learn with Games",
       description: "Learn something new while your kids playing games!",
       bg: "#ffd35e", // Bright yellow
-      textColor: "#4C1D95", // Dark purple
+      textColor: "#374151", // Dark gray
       decoration: "dots",
       tilt: "rotate-1",
     },
@@ -38,9 +38,9 @@ export const Features = () => {
       case "circles":
         return (
           <div className="absolute top-4 right-4 w-16 h-16">
-            <div className="w-4 h-4 bg-purple-800 rounded-full absolute top-0 right-0"></div>
-            <div className="w-6 h-6 bg-purple-800 rounded-full absolute top-2 right-2"></div>
-            <div className="w-8 h-8 bg-purple-800 rounded-full absolute top-4 right-4"></div>
+            <div className="w-4 h-4 bg-gray-800 rounded-full absolute top-0 right-0"></div>
+            <div className="w-6 h-6 bg-gray-800 rounded-full absolute top-2 right-2"></div>
+            <div className="w-8 h-8 bg-gray-800 rounded-full absolute top-4 right-4"></div>
           </div>
         );
       case "waves":
@@ -61,7 +61,7 @@ export const Features = () => {
         return (
           <div className="absolute top-4 right-4 w-16 h-16 grid grid-cols-4 gap-1">
             {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className="w-2 h-2 bg-purple-800 rounded-full"></div>
+              <div key={i} className="w-2 h-2 bg-gray-800 rounded-full"></div>
             ))}
           </div>
         );

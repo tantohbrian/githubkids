@@ -684,8 +684,8 @@ export default function Library() {
                 key={type}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   filter === type
-                    ? "bg-primary text-white"
-                    : "bg-white text-gray-700 border border-gray-200 hover:border-primary hover:text-primary"
+                    ? "bg-gray-800 text-white"
+                    : "bg-white text-gray-700 border border-gray-200 hover:border-gray-800 hover:text-gray-800"
                 }`}
                 onClick={() => setFilter(type)}
               >
@@ -701,7 +701,7 @@ export default function Library() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800"
             >
               {sortOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -751,7 +751,11 @@ export default function Library() {
             <p className="text-lg text-gray-500 mb-4">
               No books found matching your criteria.
             </p>
-            <Button onClick={() => setFilter("all")} variant="outline">
+            <Button
+              onClick={() => setFilter("all")}
+              variant="outline"
+              className="text-sm-system"
+            >
               Clear Filters
             </Button>
           </div>

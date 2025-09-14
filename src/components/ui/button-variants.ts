@@ -9,15 +9,15 @@ export const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-gray-100 hover:text-gray-800",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground text-purple-800",
-        link: "text-primary underline-offset-4 hover:underline",
+        ghost: "hover:bg-gray-100 hover:text-gray-800 text-gray-800",
+        link: "text-gray-800 underline-offset-4 hover:underline",
         // New modern variants
         white: "bg-white text-black hover:bg-gray-100",
         primary:
-          "bg-primary text-amber-100 hover:bg-primary/90 [&_svg]:text-amber-100",
+          "bg-orange-500 !text-amber-100 hover:bg-orange-600 [&_svg]:!text-amber-100",
         acrylic:
           "bg-black/20 backdrop-blur-md border border-white/20 text-white hover:bg-black/30",
         // Legacy variants for Bitcoin Kids

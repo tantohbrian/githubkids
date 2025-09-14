@@ -18,7 +18,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 cursor-pointer">
             <div className="relative">
-              <Bitcoin className="h-8 w-8 text-primary" />
+              <Bitcoin className="h-8 w-8 text-gray-800" />
               <Sparkles className="h-3 w-3 text-yellow-400 absolute -top-1 -right-1" />
             </div>
             <span className="text-xl font-bold text-gray-900">
@@ -30,25 +30,25 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-gray-800 transition-colors font-bold cursor-pointer"
             >
               Home
             </Link>
             <Link
               to="/library"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-gray-800 transition-colors font-bold cursor-pointer"
             >
               Library
             </Link>
             <a
               href="#"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-gray-800 transition-colors font-bold cursor-pointer"
             >
               Kids Corner
             </a>
             <a
               href="#"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-gray-800 transition-colors font-bold cursor-pointer"
             >
               About
             </a>
@@ -59,7 +59,7 @@ export const Navbar = () => {
             <Button
               variant="ghost"
               size="default"
-              className="text-gray-700 cursor-pointer"
+              className="text-sm-system text-gray-700 cursor-pointer"
             >
               Login
             </Button>
@@ -67,7 +67,7 @@ export const Navbar = () => {
               <Button
                 variant="primary"
                 size="default"
-                className="cursor-pointer"
+                className="text-sm-system cursor-pointer"
               >
                 Sign Up
               </Button>
@@ -80,7 +80,7 @@ export const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={toggleMenu}
-              className="text-gray-700 cursor-pointer"
+              className="text-sm-system text-gray-700 cursor-pointer"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -97,25 +97,25 @@ export const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-gray-800 font-bold cursor-pointer"
               >
                 Home
               </Link>
               <Link
                 to="/library"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-gray-800 font-bold cursor-pointer"
               >
                 Library
               </Link>
               <a
                 href="#"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-gray-800 font-bold cursor-pointer"
               >
                 Kids Corner
               </a>
               <a
                 href="#"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-gray-800 font-bold cursor-pointer"
               >
                 About
               </a>
@@ -124,7 +124,7 @@ export const Navbar = () => {
                 <Button
                   variant="outline"
                   size="default"
-                  className="w-full justify-center cursor-pointer"
+                  className="text-sm-system w-full justify-center cursor-pointer"
                 >
                   Login
                 </Button>
@@ -132,7 +132,7 @@ export const Navbar = () => {
                   <Button
                     variant="primary"
                     size="default"
-                    className="w-full justify-center cursor-pointer"
+                    className="text-sm-system w-full justify-center cursor-pointer"
                   >
                     Sign Up
                   </Button>

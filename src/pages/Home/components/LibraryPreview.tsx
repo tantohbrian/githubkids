@@ -600,7 +600,7 @@ export const LibraryPreview = () => {
         </h2>
         <Link
           to="/library"
-          className="text-primary hover:text-primary/80 text-lg font-medium"
+          className="text-gray-800 hover:text-gray-600 text-lg font-medium"
         >
           View All
         </Link>

@@ -29,7 +29,7 @@ export const NewsletterComponent = () => {
               <Button
                 variant="white"
                 size="default"
-                className="h-12 px-8 bg-gray-200 text-gray-900 hover:bg-gray-100 rounded-lg font-medium"
+                className="h-12 px-8 bg-gray-200 text-gray-900 hover:bg-gray-100 rounded-lg font-medium text-sm-system"
               >
                 Notify me
               </Button>
