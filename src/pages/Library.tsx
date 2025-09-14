@@ -706,9 +706,9 @@ export default function Library() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Featured Books
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2">
                 {adjustedRegularBooks.map((book) => (
-                  <div key={book.id} className="pl-2 md:pl-4">
+                  <div key={book.id} className="pl-1">
                     <BookCard
                       book={book}
                       onAddToWishlist={handleAddToWishlist}

@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Star,
   ShoppingCart,
@@ -156,6 +156,462 @@ const sampleBooks: Book[] = [
       ebook: "13,000 FCAF",
     },
   },
+  {
+    id: "7",
+    title: "Digital Money Explained",
+    author: "Prof. Maria Santos",
+    price: "17,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "9-13",
+    pages: 72,
+    format: "PDF + Interactive",
+    preview: [
+      "Understanding Digital Currency",
+      "How Bitcoin Works",
+      "Blockchain Technology",
+    ],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "20,000 FCAF",
+      ebook: "17,000 FCAF",
+    },
+  },
+  {
+    id: "8",
+    title: "Bitcoin Heroes Comic Series",
+    author: "David Park",
+    price: "14,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
+    type: "comic",
+    ageRange: "7-11",
+    pages: 40,
+    format: "PDF + Print",
+    preview: [
+      "The Mining Adventure",
+      "Satoshi's Secret",
+      "The Digital Revolution",
+    ],
+    rating: 4,
+    category: "Entertainment",
+    language: "English",
+    formats: {
+      hardcover: "17,000 FCAF",
+      ebook: "14,000 FCAF",
+    },
+  },
+  {
+    id: "9",
+    title: "Crypto Math Workbook",
+    author: "Dr. Jennifer Lee",
+    price: "15,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80",
+    type: "activity",
+    ageRange: "8-12",
+    pages: 56,
+    format: "PDF + Printable",
+    preview: [
+      "Bitcoin Calculations",
+      "Mining Mathematics",
+      "Blockchain Puzzles",
+    ],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "18,000 FCAF",
+      ebook: "15,000 FCAF",
+    },
+  },
+  {
+    id: "10",
+    title: "Teacher's Bitcoin Toolkit",
+    author: "Robert Chen",
+    price: "22,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "Adults",
+    pages: 120,
+    format: "PDF + Resources",
+    preview: ["Lesson Plans", "Student Activities", "Assessment Tools"],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "25,000 FCAF",
+      ebook: "22,000 FCAF",
+    },
+  },
+  {
+    id: "11",
+    title: "Bitcoin Around the World",
+    author: "Ana Rodriguez",
+    price: "16,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80",
+    type: "translation",
+    ageRange: "8-14",
+    pages: 88,
+    format: "PDF + Audio",
+    preview: [
+      "Global Bitcoin Stories",
+      "Cultural Perspectives",
+      "Worldwide Adoption",
+    ],
+    rating: 4,
+    category: "Cultural",
+    language: "Multiple",
+    formats: {
+      hardcover: "19,000 FCAF",
+      ebook: "16,000 FCAF",
+    },
+  },
+  {
+    id: "12",
+    title: "Digital Art & Bitcoin",
+    author: "Sophie Williams",
+    price: "13,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
+    type: "activity",
+    ageRange: "6-10",
+    pages: 28,
+    format: "PDF + Print",
+    preview: ["Bitcoin Art Projects", "Digital Design", "Creative Activities"],
+    rating: 5,
+    category: "Creative",
+    language: "English",
+    formats: {
+      hardcover: "16,000 FCAF",
+      ebook: "13,000 FCAF",
+    },
+  },
+  {
+    id: "13",
+    title: "Blockchain Basics for Teens",
+    author: "Dr. Michael Brown",
+    price: "18,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "13-17",
+    pages: 96,
+    format: "PDF + Interactive",
+    preview: [
+      "Advanced Blockchain Concepts",
+      "Smart Contracts",
+      "Cryptocurrency Trading",
+    ],
+    rating: 4,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "21,000 FCAF",
+      ebook: "18,000 FCAF",
+    },
+  },
+  {
+    id: "14",
+    title: "Bitcoin Mystery Series",
+    author: "Lisa Johnson",
+    price: "15,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
+    type: "comic",
+    ageRange: "8-12",
+    pages: 36,
+    format: "PDF + Print",
+    preview: [
+      "The Missing Bitcoin",
+      "The Hacker's Code",
+      "The Final Transaction",
+    ],
+    rating: 5,
+    category: "Entertainment",
+    language: "English",
+    formats: {
+      hardcover: "18,000 FCAF",
+      ebook: "15,000 FCAF",
+    },
+  },
+  {
+    id: "15",
+    title: "Crypto Science Experiments",
+    author: "Dr. Sarah Kim",
+    price: "16,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80",
+    type: "activity",
+    ageRange: "9-13",
+    pages: 64,
+    format: "PDF + Printable",
+    preview: [
+      "Hash Function Experiments",
+      "Mining Simulations",
+      "Blockchain Models",
+    ],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "19,000 FCAF",
+      ebook: "16,000 FCAF",
+    },
+  },
+  {
+    id: "16",
+    title: "Parent's Crypto Handbook",
+    author: "Mark Thompson",
+    price: "21,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "Adults",
+    pages: 108,
+    format: "PDF + Resources",
+    preview: ["Teaching Strategies", "Safety Guidelines", "Investment Basics"],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "24,000 FCAF",
+      ebook: "21,000 FCAF",
+    },
+  },
+  {
+    id: "17",
+    title: "Bitcoin Folktales",
+    author: "Elena Martinez",
+    price: "14,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80",
+    type: "translation",
+    ageRange: "7-12",
+    pages: 52,
+    format: "PDF + Audio",
+    preview: [
+      "Ancient Digital Wisdom",
+      "Modern Crypto Tales",
+      "Future Stories",
+    ],
+    rating: 4,
+    category: "Cultural",
+    language: "Multiple",
+    formats: {
+      hardcover: "17,000 FCAF",
+      ebook: "14,000 FCAF",
+    },
+  },
+  {
+    id: "18",
+    title: "Bitcoin Board Game Guide",
+    author: "Tom Wilson",
+    price: "13,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
+    type: "activity",
+    ageRange: "6-12",
+    pages: 32,
+    format: "PDF + Print",
+    preview: ["Game Rules", "Strategy Tips", "Family Activities"],
+    rating: 5,
+    category: "Interactive",
+    language: "English",
+    formats: {
+      hardcover: "16,000 FCAF",
+      ebook: "13,000 FCAF",
+    },
+  },
+  {
+    id: "19",
+    title: "Advanced Bitcoin Concepts",
+    author: "Dr. Rachel Green",
+    price: "19,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "14-18",
+    pages: 112,
+    format: "PDF + Interactive",
+    preview: ["Technical Analysis", "Market Dynamics", "Future Trends"],
+    rating: 4,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "22,000 FCAF",
+      ebook: "19,000 FCAF",
+    },
+  },
+  {
+    id: "20",
+    title: "Bitcoin Superheroes",
+    author: "Carlos Mendez",
+    price: "15,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
+    type: "comic",
+    ageRange: "8-14",
+    pages: 44,
+    format: "PDF + Print",
+    preview: [
+      "Crypto Crusaders",
+      "Blockchain Battles",
+      "Digital Defenders",
+    ],
+    rating: 5,
+    category: "Entertainment",
+    language: "English",
+    formats: {
+      hardcover: "18,000 FCAF",
+      ebook: "15,000 FCAF",
+    },
+  },
+  {
+    id: "21",
+    title: "Bitcoin Coding for Kids",
+    author: "Dr. Alex Kumar",
+    price: "17,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80",
+    type: "activity",
+    ageRange: "10-16",
+    pages: 80,
+    format: "PDF + Code Examples",
+    preview: [
+      "Basic Programming",
+      "Blockchain Code",
+      "Smart Contracts",
+    ],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "20,000 FCAF",
+      ebook: "17,000 FCAF",
+    },
+  },
+  {
+    id: "22",
+    title: "Educator's Bitcoin Course",
+    author: "Dr. Patricia White",
+    price: "23,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "Adults",
+    pages: 140,
+    format: "PDF + Video Course",
+    preview: ["Curriculum Design", "Teaching Methods", "Student Assessment"],
+    rating: 5,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "26,000 FCAF",
+      ebook: "23,000 FCAF",
+    },
+  },
+  {
+    id: "23",
+    title: "Bitcoin Poetry Collection",
+    author: "Maya Patel",
+    price: "13,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80",
+    type: "translation",
+    ageRange: "8-15",
+    pages: 40,
+    format: "PDF + Audio",
+    preview: [
+      "Digital Dreams",
+      "Crypto Verses",
+      "Blockchain Ballads",
+    ],
+    rating: 4,
+    category: "Cultural",
+    language: "Multiple",
+    formats: {
+      hardcover: "16,000 FCAF",
+      ebook: "13,000 FCAF",
+    },
+  },
+  {
+    id: "24",
+    title: "Bitcoin Origami Book",
+    author: "Yuki Tanaka",
+    price: "14,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
+    type: "activity",
+    ageRange: "5-10",
+    pages: 24,
+    format: "PDF + Print",
+    preview: [
+      "Bitcoin Symbol Origami",
+      "Blockchain Models",
+      "Digital Art Projects",
+    ],
+    rating: 5,
+    category: "Creative",
+    language: "English",
+    formats: {
+      hardcover: "17,000 FCAF",
+      ebook: "14,000 FCAF",
+    },
+  },
+  {
+    id: "25",
+    title: "Bitcoin History Timeline",
+    author: "Dr. James Anderson",
+    price: "16,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80",
+    type: "guide",
+    ageRange: "11-16",
+    pages: 72,
+    format: "PDF + Interactive",
+    preview: [
+      "Bitcoin's Origins",
+      "Key Milestones",
+      "Future Predictions",
+    ],
+    rating: 4,
+    category: "Educational",
+    language: "English",
+    formats: {
+      hardcover: "19,000 FCAF",
+      ebook: "16,000 FCAF",
+    },
+  },
+  {
+    id: "26",
+    title: "Bitcoin Music & Songs",
+    author: "Maria Garcia",
+    price: "15,000 FCAF",
+    cover:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80",
+    type: "translation",
+    ageRange: "6-12",
+    pages: 36,
+    format: "PDF + Audio",
+    preview: [
+      "Crypto Songs",
+      "Blockchain Beats",
+      "Digital Melodies",
+    ],
+    rating: 5,
+    category: "Entertainment",
+    language: "Multiple",
+    formats: {
+      hardcover: "18,000 FCAF",
+      ebook: "15,000 FCAF",
+    },
+  },
 ];
 
 const BookDetailPage = () => {
@@ -165,6 +621,11 @@ const BookDetailPage = () => {
     "ebook"
   );
   const book = sampleBooks.find((b) => b.id === bookId);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [bookId]);
 
   if (!book) {
     return (
@@ -220,7 +681,7 @@ const BookDetailPage = () => {
         </Button>
 
         {/* Main Book Details Section */}
-        <div className="bg-white rounded-xl p-8 mb-12">
+        <div className=" rounded-xl p-8 mb-12">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Left: Book Cover */}
             <div className="flex-shrink-0 lg:w-1/3">
@@ -233,7 +694,7 @@ const BookDetailPage = () => {
                 {/* Heart Icon for Wishlist */}
                 <button
                   onClick={handleAddToWishlist}
-                  className="absolute top-3 right-3 p-2 bg-white/90 rounded-full hover:bg-white transition-colors"
+                  className="absolute top-3 right-3 p-2 /90 rounded-full hover: transition-colors"
                 >
                   <Heart className="w-5 h-5 text-gray-600 hover:text-red-500" />
                 </button>
@@ -279,7 +740,7 @@ const BookDetailPage = () => {
                     className={`px-4 py-2 rounded-lg border-2 transition-colors ${
                       selectedFormat === "hardcover"
                         ? "border-green-600 bg-gray-100 text-black"
-                        : "border-gray-300 bg-white text-black hover:bg-gray-50"
+                        : "border-gray-300  text-black hover:bg-gray-50"
                     }`}
                   >
                     <div className="text-base-system font-medium">
@@ -294,7 +755,7 @@ const BookDetailPage = () => {
                     className={`px-4 py-2 rounded-lg border-2 transition-colors ${
                       selectedFormat === "ebook"
                         ? "border-green-600 bg-gray-100 text-black"
-                        : "border-gray-300 bg-white text-black hover:bg-gray-50"
+                        : "border-gray-300  text-black hover:bg-gray-50"
                     }`}
                   >
                     <div className="text-base-system font-medium">eBook</div>
@@ -346,7 +807,7 @@ const BookDetailPage = () => {
         </div>
 
         {/* Overview/Full Description Section */}
-        <div className="bg-white rounded-xl p-8 mb-12">
+        <div className=" rounded-xl p-8 mb-12">
           <h2 className="text-xl-system font-bold text-gray-900 mb-6">
             Overview
           </h2>
@@ -402,7 +863,7 @@ const BookDetailPage = () => {
 
         {/* Related Books Section */}
         {relatedBooks.length > 0 && (
-          <div className="bg-white rounded-xl p-8">
+          <div className=" rounded-xl p-8">
             <h2 className="text-xl-system font-bold text-gray-900 mb-8 text-center">
               You May Also Like
             </h2>
@@ -413,7 +874,7 @@ const BookDetailPage = () => {
                   key={relatedBook.id}
                   className="group"
                 >
-                  <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:transition-shadow duration-300">
+                  <div className=" border border-gray-200 rounded-lg overflow-hidden hover:transition-shadow duration-300">
                     <div className="relative">
                       <img
                         src={relatedBook.cover}

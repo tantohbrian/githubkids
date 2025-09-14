@@ -20,7 +20,7 @@ export const BookCard = ({ book, onAddToWishlist }: BookCardProps) => {
 
   return (
     <Link to={`/library/${book.id}`} className={`group block ${cardClasses}`}>
-      <div className="bg-white transition-colors duration-300 group-hover:bg-gray-50">
+      <div className="transition-colors duration-300 group-hover:bg-gray-50">
         {/* Book Cover */}
         <div className="relative">
           <img

@@ -3,7 +3,6 @@ import { Features } from "@/pages/Home/components/Features";
 import { LibraryPreview } from "@/pages/Home/components/LibraryPreview";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { NewsletterComponent } from "@/components/NewsletterComponent";
-import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -13,20 +12,7 @@ export const Home = () => {
         <Features />
       </section>
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-xl-system font-bold text-gray-900 mb-6">
-              Library Preview
-            </h2>
-            <Link
-              to="/library"
-              className="text-primary font-semibold hover:underline cursor-pointer"
-            >
-              View All
-            </Link>
-          </div>
-          <LibraryPreview />
-        </div>
+        <LibraryPreview />
       </section>
 
       {/* FAQ Section */}
