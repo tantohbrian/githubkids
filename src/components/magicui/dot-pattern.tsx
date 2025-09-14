@@ -61,13 +61,13 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
  */
 
 export function DotPattern({
-  width = 16,
-  height = 16,
+  width = 12,
+  height = 12,
   x = 0,
   y = 0,
   cx = 1,
   cy = 1,
-  cr = 1,
+  cr = 2,
   className,
   glow = false,
   ...props
@@ -89,23 +89,42 @@ export function DotPattern({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  const dots = Array.from(
-    {
-      length:
-        Math.ceil(dimensions.width / width) *
-        Math.ceil(dimensions.height / height),
-    },
-    (_, i) => {
-      const col = i % Math.ceil(dimensions.width / width);
-      const row = Math.floor(i / Math.ceil(dimensions.width / width));
+  const dots = React.useMemo(() => {
+    const cols = Math.ceil(dimensions.width / width);
+    const rows = Math.ceil(dimensions.height / height);
+    const totalDots = cols * rows;
+
+    // Limit dots for performance - max 4000 dots (increased for better coverage)
+    if (totalDots > 4000) {
+      const scale = Math.sqrt(4000 / totalDots);
+      const newWidth = width / scale;
+      const newHeight = height / scale;
+      const newCols = Math.ceil(dimensions.width / newWidth);
+      const newRows = Math.ceil(dimensions.height / newHeight);
+
+      return Array.from({ length: newCols * newRows }, (_, i) => {
+        const col = i % newCols;
+        const row = Math.floor(i / newCols);
+        return {
+          x: col * newWidth + cx,
+          y: row * newHeight + cy,
+          delay: Math.random() * 2, // Faster animation
+          duration: Math.random() * 1.5 + 1, // Faster animation
+        };
+      });
+    }
+
+    return Array.from({ length: totalDots }, (_, i) => {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
       return {
         x: col * width + cx,
         y: row * height + cy,
-        delay: Math.random() * 5,
-        duration: Math.random() * 3 + 2,
+        delay: Math.random() * 2, // Faster animation
+        duration: Math.random() * 1.5 + 1, // Faster animation
       };
-    },
-  );
+    });
+  }, [dimensions.width, dimensions.height, width, height, cx, cy]);
 
   return (
     <svg
@@ -113,7 +132,7 @@ export function DotPattern({
       aria-hidden="true"
       className={cn(
         "pointer-events-none absolute inset-0 h-full w-full",
-        className,
+        className
       )}
       {...props}
     >
@@ -130,13 +149,12 @@ export function DotPattern({
           cy={dot.y}
           r={cr}
           fill={glow ? `url(#${id}-gradient)` : "currentColor"}
-          className="text-neutral-400/80"
-          initial={glow ? { opacity: 0.4, scale: 1 } : {}}
+          className="text-neutral-300/90"
+          initial={glow ? { opacity: 0.4 } : {}}
           animate={
             glow
               ? {
-                  opacity: [0.4, 1, 0.4],
-                  scale: [1, 1.5, 1],
+                  opacity: [0.4, 0.9, 0.4],
                 }
               : {}
           }

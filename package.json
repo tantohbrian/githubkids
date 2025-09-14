@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.2.6",
     "@fontsource/caveat": "^5.2.7",
+    "@fontsource/figtree": "^5.2.8",
     "@fontsource/kalam": "^5.2.6",
     "@heroui/accordion": "^2.2.23",
     "@hookform/resolvers": "^5.2.1",
@@ -23,6 +23,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.543.0",
     "motion": "^12.23.12",

@@ -1,35 +1,67 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Star, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import type { Book } from "./Book.types";
 
-export const BookCard: React.FC<{ book: Book }> = ({ book }) => {
-  const navigate = useNavigate();
-  return (
-    <div
-      className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden"
-      onClick={() => navigate(`/library/${book.id}`)}
-    >
-      <div className="relative overflow-hidden">
-        <img
-          src={book.cover}
-          alt={book.title}
-          className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div className="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded-full font-medium">
-          {book.type.charAt(0).toUpperCase() + book.type.slice(1)}
-        </div>
-      </div>
+interface BookCardProps {
+  book: Book;
+  onAddToWishlist?: (book: Book) => void;
+}
 
-      <div className="p-4 space-y-2">
-        <div className="text-xs text-gray-500">By {book.author}</div>
-        <div className="font-semibold text-base text-gray-900 leading-tight line-clamp-2">
-          {book.title}
+export const BookCard = ({ book, onAddToWishlist }: BookCardProps) => {
+  const handleAddToWishlist = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (onAddToWishlist) {
+      onAddToWishlist(book);
+    }
+  };
+
+  const cardClasses = "w-full";
+
+  return (
+    <Link to={`/library/${book.id}`} className={`group block ${cardClasses}`}>
+      <div className="bg-white transition-colors duration-300 group-hover:bg-gray-50">
+        {/* Book Cover */}
+        <div className="relative">
+          <img
+            src={book.cover}
+            alt={book.title}
+            className="w-full h-64 object-cover"
+          />
+          {/* Heart Icon for Wishlist */}
+          <button
+            onClick={handleAddToWishlist}
+            className="absolute top-3 right-3 p-2 bg-white/90 rounded-full hover:bg-white transition-colors"
+          >
+            <Heart className="w-4 h-4 text-gray-600 hover:text-red-500" />
+          </button>
         </div>
-        <div className="text-primary font-bold text-lg">{book.price}</div>
-        {book.ageRange && (
-          <div className="text-xs text-gray-500">Ages {book.ageRange}</div>
-        )}
+
+        {/* Book Info */}
+        <div className="p-4">
+          <h3 className="text-base font-semibold text-gray-900 mb-1 line-clamp-2">
+            {book.title}
+          </h3>
+          <p className="text-sm text-green-600 mb-2">by {book.author}</p>
+
+          {/* Rating */}
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className={`w-4 h-4 ${
+                  i < (book.rating || 0)
+                    ? "text-yellow-400 fill-current"
+                    : "text-gray-300"
+                }`}
+              />
+            ))}
+            <span className="text-xs text-gray-500 ml-1">
+              ({book.rating || 0}.0)
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };

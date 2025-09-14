@@ -94,12 +94,12 @@ export default function Stepper({
 
   return (
     <div
-      className="flex min-h-full flex-1 flex-col items-center justify-center p-4"
+      className="flex flex-1 flex-col items-center justify-center p-4"
       {...rest}
     >
       <div
         className={`mx-auto w-full max-w-md rounded-2xl ${stepCircleContainerClassName}`}
-        style={{ border: "1px solid #e5e7eb" }}
+        // style={{ border: "1px solid #e5e7eb" }}
       >
         <div
           className={`${stepContainerClassName} flex w-full items-center p-8`}
@@ -156,7 +156,7 @@ export default function Stepper({
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`duration-350 rounded px-2 py-1 transition ${
+                  className={`duration-350 rounded px-2 py-1 transition cursor-pointer ${
                     currentStep === 1
                       ? "pointer-events-none opacity-50 text-neutral-400"
                       : "text-neutral-400 hover:text-neutral-700"
@@ -168,7 +168,7 @@ export default function Stepper({
               )}
               <button
                 onClick={isLastStep ? handleComplete : handleNext}
-                className="duration-350 flex items-center justify-center rounded-full bg-primary py-1.5 px-3.5 font-medium tracking-tight text-white transition hover:bg-primary/90 active:bg-primary/80"
+                className="duration-350 flex items-center justify-center rounded-2xl bg-primary py-1 px-3.5 font-medium tracking-tight text-white transition hover:bg-primary/90 active:bg-primary/80 cursor-pointer"
                 {...nextButtonProps}
               >
                 {isLastStep ? "Create Account" : nextButtonText}

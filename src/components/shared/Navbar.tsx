@@ -30,25 +30,25 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
             >
               Home
             </Link>
             <Link
               to="/library"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
             >
               Library
             </Link>
             <a
               href="#"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
             >
               Kids Corner
             </a>
             <a
               href="#"
-              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer"
+              className="text-sm-system text-gray-700 hover:text-primary transition-colors font-bold cursor-pointer"
             >
               About
             </a>
@@ -56,11 +56,19 @@ export const Navbar = () => {
 
           {/* Auth Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" className="text-gray-700 cursor-pointer">
+            <Button
+              variant="ghost"
+              size="default"
+              className="text-gray-700 cursor-pointer"
+            >
               Login
             </Button>
             <SignupForm>
-              <Button variant="primary" className="px-6 py-2 cursor-pointer">
+              <Button
+                variant="primary"
+                size="default"
+                className="cursor-pointer"
+              >
                 Sign Up
               </Button>
             </SignupForm>
@@ -89,25 +97,25 @@ export const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
               >
                 Home
               </Link>
               <Link
                 to="/library"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
               >
                 Library
               </Link>
               <a
                 href="#"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
               >
                 Kids Corner
               </a>
               <a
                 href="#"
-                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-medium cursor-pointer"
+                className="block px-3 py-2 text-sm-system text-gray-700 hover:text-primary font-bold cursor-pointer"
               >
                 About
               </a>
@@ -115,6 +123,7 @@ export const Navbar = () => {
               <div className="pt-4 space-y-2 border-t border-gray-200">
                 <Button
                   variant="outline"
+                  size="default"
                   className="w-full justify-center cursor-pointer"
                 >
                   Login
@@ -122,6 +131,7 @@ export const Navbar = () => {
                 <SignupForm>
                   <Button
                     variant="primary"
+                    size="default"
                     className="w-full justify-center cursor-pointer"
                   >
                     Sign Up

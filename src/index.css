@@ -1,12 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "@fontsource-variable/inter";
+@import "@fontsource/figtree";
 @import "@fontsource/caveat";
 @import "@fontsource/kalam";
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #fefdf5;
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
@@ -40,7 +40,7 @@
 
   /* custom theme  */
   /* Purple from main sections and buttons: #7C3AED */
-  --color-primary: #ea580c;
+  --color-primary: rgb(234, 88, 12);
   /* Yellow/Gold from accents: #FDE047 */
   --color-secondary: hsl(45, 96%, 64%);
   /* Light purple from background: #E0E7FF */
@@ -51,11 +51,11 @@
   /* --color-muted: hsl(262, 50%, 70%); */
   --color-border: hsl(262, 30%, 85%); /* Light purple borders */
 
-  --font-sans: "Inter Variable", sans-serif;
+  --font-sans: "Figtree", sans-serif;
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
+  --background: #b5a217;
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
@@ -124,9 +124,9 @@
     line-height: 1.4;
   }
 
-  /* Buttons / Nav / Labels - 14px (base) */
+  /* Buttons / Nav / Labels - 15px (base) */
   .text-sm-system {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.5;
   }
 

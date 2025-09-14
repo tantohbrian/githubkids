@@ -2,6 +2,7 @@ import { Hero } from "@/pages/Home/components/Hero";
 import { Features } from "@/pages/Home/components/Features";
 import { LibraryPreview } from "@/pages/Home/components/LibraryPreview";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { NewsletterComponent } from "@/components/NewsletterComponent";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
@@ -42,6 +43,9 @@ export const Home = () => {
           <FAQAccordion />
         </div>
       </section>
+
+      {/* Newsletter Section */}
+      <NewsletterComponent />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { DotPattern } from "@/components/magicui/dot-pattern";
-import { FloatingNavbar } from "@/components/shared/FloatingNavbar";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
@@ -10,14 +9,14 @@ export const Hero = () => {
       <div className="absolute inset-0 w-full h-full">
         <DotPattern
           glow={true}
+          width={16}
+          height={16}
+          cr={2.5}
           className={cn(
-            "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+            "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
           )}
         />
       </div>
-
-      {/* Floating Navbar */}
-      <FloatingNavbar />
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
@@ -30,7 +29,7 @@ export const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <Button variant="white" size="default">
+            <Button variant="getStarted" size="default">
               Get Started
             </Button>
             <Button variant="acrylic" size="default">

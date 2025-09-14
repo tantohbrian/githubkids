@@ -11,4 +11,11 @@ export interface Book {
   format?: string;
   preview?: string[];
   relatedBooks?: string[];
+  rating?: number;
+  category?: string;
+  language?: string;
+  formats?: {
+    hardcover: string;
+    ebook: string;
+  };
 }

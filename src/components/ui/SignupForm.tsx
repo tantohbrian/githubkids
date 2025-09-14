@@ -111,8 +111,8 @@ export const SignupForm = ({ children }: SignupFormProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-lg w-full mx-4 p-0">
-        <div className="bg-white rounded-lg">
+      <DialogContent className="sm:max-w-lg w-full mx-4 p-0 ">
+        <div className=" bg-white rounded-lg">
           <DialogHeader className="text-center p-6 pb-4">
             <DialogTitle className="text-xl-system font-bold text-gray-900">
               Create Account
@@ -138,8 +138,8 @@ export const SignupForm = ({ children }: SignupFormProps) => {
           >
             {/* Step 1: Welcome & Role Selection */}
             <Step>
-              <div className="space-y-6">
-                <div className="text-center">
+              <div className="space-y-6 ">
+                <div className="text-center ">
                   <h3 className="text-lg-system font-semibold text-gray-900 mb-2">
                     Welcome to Bitcoin Kids!
                   </h3>
@@ -389,7 +389,7 @@ export const SignupForm = ({ children }: SignupFormProps) => {
           </Stepper>
 
           {/* Login Link */}
-          <div className="text-center p-6 pt-4 border-t border-gray-200">
+          {/* <div className="text-center p-6 pt-4 border-t border-gray-200">
             <p className="text-sm-system text-gray-600">
               Already have an account?{" "}
               <button
@@ -400,7 +400,7 @@ export const SignupForm = ({ children }: SignupFormProps) => {
                 Sign in
               </button>
             </p>
-          </div>
+          </div> */}
         </div>
       </DialogContent>
     </Dialog>
