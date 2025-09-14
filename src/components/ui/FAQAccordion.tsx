@@ -34,12 +34,12 @@ export const FAQAccordion = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto py-2">
       <Accordion
         type="single"
         collapsible
         defaultValue="item-1"
-        className="space-y-4"
+        className="space-y-4 "
       >
         {faqData.map((item) => (
           <AccordionItem
@@ -47,10 +47,10 @@ export const FAQAccordion = () => {
             value={`item-${item.key}`}
             className="bg-gray-50 border border-gray-200 rounded-lg px-6"
           >
-            <AccordionTrigger className="text-left hover:no-underline">
+            <AccordionTrigger className="text-left hover:no-underline text-base-system cursor-pointer">
               <span className="font-semibold text-gray-900">{item.title}</span>
             </AccordionTrigger>
-            <AccordionContent className="text-gray-700 leading-relaxed">
+            <AccordionContent className="text-gray-700 leading-relaxed text-base-system">
               {item.content}
             </AccordionContent>
           </AccordionItem>

@@ -802,7 +802,8 @@ const BookDetailPage = () => {
 
           {/* Notes from Bookseller */}
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-            <p className="text-base-system text-blue-800 italic">
+            
+            <p className="text-base-system text-blue-800">
               <strong>Notes from Bitcoin Kids:</strong> This resource has been
               carefully crafted to make complex Bitcoin concepts accessible and
               engaging for young learners. Perfect for parents and educators
@@ -891,11 +892,11 @@ const BookDetailPage = () => {
                             }`}
                           />
                         ))}
-                        <span className="text-xs text-gray-500">
+                        <span className="text-sm text-gray-500">
                           ({relatedBook.rating || 0}.0)
                         </span>
                       </div>
-                      <p className="text-xs text-gray-500 text-base-system">
+                      <p className="text-sm text-gray-500 text-base-system">
                         {relatedBook.ageRange}
                       </p>
                     </div>

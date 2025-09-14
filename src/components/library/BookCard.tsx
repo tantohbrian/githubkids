@@ -39,24 +39,24 @@ export const BookCard = ({ book, onAddToWishlist }: BookCardProps) => {
 
         {/* Book Info */}
         <div className="p-3">
-          <h3 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">
+          <h3 className="text-sm-system font-semibold text-gray-900 mb-1 line-clamp-2">
             {book.title}
           </h3>
-          <p className="text-xs text-green-600 mb-2">by {book.author}</p>
+          <p className="text-sm text-green-600 mb-2">by {book.author}</p>
 
           {/* Rating */}
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-3 h-3 ${
+                className={`w-4 h-4 ${
                   i < (book.rating || 0)
                     ? "text-yellow-400 fill-current"
                     : "text-gray-300"
                 }`}
               />
             ))}
-            <span className="text-xs text-gray-500 ml-1">
+            <span className="text-sm text-gray-500 ml-1">
               ({book.rating || 0}.0)
             </span>
           </div>

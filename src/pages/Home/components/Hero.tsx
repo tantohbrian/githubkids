@@ -4,13 +4,13 @@ import bgDotted from "@/assets/bg-dotted.svg";
 
 export const Hero = () => {
   return (
-    <section className="relative h-[75vh] overflow-hidden bg-white">
+    <section className="relative h-[90vh] overflow-hidden bg-white">
       {/* Background SVG */}
       <div className="absolute inset-0 w-full h-full">
         <img
           src={bgDotted}
           alt="Dotted background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-50"
         />
       </div>
 
