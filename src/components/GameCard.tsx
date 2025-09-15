@@ -1,4 +1,4 @@
-import { ComponentType } from "react";
+import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
